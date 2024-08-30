@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getPokemonByName } from "../api";
 import DetailPokemon from "../components/detailPoke/DetailPokemon";
+import clsx from "clsx";
 
 export default function PokemonPage() {
   const navigate = useNavigate();
@@ -26,7 +27,11 @@ export default function PokemonPage() {
           onClick={() => {
             navigate(`/`);
           }}
-          className=" pr-20 text-right  text-3xl font-bold p-3 bg-cover bg-center bg-no-repeat "
+          className={clsx(
+            "pr-20 p-3 ",
+            "text-right text-3xl font-bold",
+            "bg-cover bg-center bg-no-repeat"
+          )}
           style={{
             backgroundImage: `url('${pokemon.sprites?.other["official-artwork"]?.front_default}')`,
             backgroundSize: "5rem",
@@ -48,7 +53,13 @@ export default function PokemonPage() {
           onClick={() => {
             navigate("/");
           }}
-          className="bg-white text-black px-6 py-3 text-lg rounded-full hover:bg-black border transition duration-300 ease-in-out hover:text-white  "
+          className={clsx(
+            "bg-white text-black text-lg",
+            "px-6 py-3",
+            "rounded-full border",
+            "hover:bg-black hover:text-white ",
+            "transition duration-300 ease-in-out "
+          )}
         >
           HOME
         </button>

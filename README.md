@@ -7,6 +7,7 @@ Página simple utilizando la API de `Pokédex` para entender el concepto de `use
 - **vite:** Herramienta que facilita el desarrollo rápido y eficiente de aplicaciones web.
 - **react:** Biblioteca de JavaScript para construir interfaces de usuario interactivas.
 - **railwindcss** Framework de CSS para desarrollar la interface.
+- **clsx** se utilizo para estructurar mis clases de css y tener mejor legibilidad
 
 Se manejó una estructura de carpetas que facilita la lectura y mantenibilidad del proyecto.
 

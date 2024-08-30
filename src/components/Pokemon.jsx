@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPokemonByName } from "../api";
 import { useNavigate } from "react-router-dom";
+import clsx from "clsx";
 
 export default function Pokemon({ name }) {
   const navigate = useNavigate();
@@ -17,7 +18,11 @@ export default function Pokemon({ name }) {
       onClick={() => {
         navigate(`pokemon/${name}`);
       }}
-      className={` hover:border-green-200 relative hover:animate-customPulse rounded-lg  flex flex-col items-center gap-3 border border-white p-4`}
+      className={clsx(
+        "hover:border-green-200 relative hover:animate-customPulse",
+        "rounded-lg border border-white ",
+        "flex flex-col items-center gap-3 p-4"
+      )}
       style={{
         backgroundImage: `url('${pokemon.sprites?.other["official-artwork"]?.front_default}')`,
       }}
